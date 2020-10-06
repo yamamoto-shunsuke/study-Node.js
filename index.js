@@ -1,3 +1,10 @@
-var server = require("./server"); //requireし、変数に割り当てることでサーバ起動関数を利用できる。
+const express = require('express')
+const app = express();
 
-server.start();
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+});
+
+app.listen(8000, () => {
+  console.log('Example app listening on port 8000!')
+});
